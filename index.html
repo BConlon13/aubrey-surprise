@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>💌</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f7f7f7;
+      padding-top: 100px;
+    }
+    #content {
+      display: none;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>You already have the answer 💌</h2>
+
+  <input type="password" id="password" placeholder="Enter password">
+  <button onclick="checkPassword()">Unlock</button>
+
+  <p id="error" style="color:red;"></p>
+
+  <div id="content">
+    <h1>See you in Seattle 💫</h1>
+    <img src="YOUR_IMAGE_LINK_HERE" style="max-width:80%;">
+  </div>
+
+  <script>
+    function checkPassword() {
+      var pass = document.getElementById("password").value.toLowerCase();
+      if (pass === "sleepless") {
+        document.getElementById("content").style.display = "block";
+        document.getElementById("error").innerText = "";
+      } else {
+        document.getElementById("error").innerText = "Not quite… try again 💭";
+      }
+    }
+  </script>
+
+</body>
+</html>
